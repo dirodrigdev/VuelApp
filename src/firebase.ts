@@ -2,7 +2,6 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
-// Config de tu proyecto (la que me pasaste)
 const firebaseConfig = {
   apiKey: 'AIzaSyAZEy-9uo4BT0x4mMPlI9HgKvn8yhDNgcE',
   authDomain: 'vuelapp-fd261.firebaseapp.com',
@@ -13,8 +12,8 @@ const firebaseConfig = {
   measurementId: 'G-XF1WFNNE0J',
 };
 
-// Inicializar Firebase
+// Inicializa Firebase
 const app = initializeApp(firebaseConfig);
 
-// Firestore (base de datos)
+// Exporta Firestore para usarlo en el resto de la app
 export const db = getFirestore(app);
