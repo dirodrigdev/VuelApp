@@ -34,7 +34,6 @@ const App: React.FC = () => {
   // Suscripción a Firestore
   useEffect(() => {
     const colRef = collection(db, 'flights');
-    // si quieres ordenarlo por fecha, asumimos que subiremos 'departureDate' string
     const q = query(colRef, orderBy('departureDate', 'asc'));
 
     const unsub = onSnapshot(
